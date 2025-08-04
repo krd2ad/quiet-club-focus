@@ -5,17 +5,18 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  server: {
-    base: '/quiet-club-focus/',
-  },
+  base: '/quiet-club-focus/', // ✅ moved to root level
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    outDir: 'docs', // ✅ builds into /docs for GitHub Pages
+    emptyOutDir: true,
   },
 }));
