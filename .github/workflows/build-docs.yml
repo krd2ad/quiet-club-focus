@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           bun install
-          bun add react-intersection-observer
+          bun add react-intersection-observer framer-motion
 
       - name: Build site into docs/
         run: bun run build
