@@ -206,11 +206,11 @@ const AboutSection = () => {
           className="space-y-8"
         >
           <h3 className="text-2xl font-bold text-center mb-4">What Our Members Say</h3>
-          <div className="overflow-x-auto whitespace-nowrap snap-x snap-mandatory flex space-x-6 pb-2">
+          <div className="overflow-x-auto snap-x snap-mandatory flex gap-6 px-4 md:px-0 scroll-smooth">
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className="snap-center shrink-0 w-80 bg-background border border-border rounded-lg p-6 shadow-sm text-left"
+                className="snap-center shrink-0 w-[280px] sm:w-[320px] bg-background border border-border rounded-lg p-6 shadow-sm text-left"
               >
                 <QuoteIcon className="w-5 h-5 text-muted-foreground mb-2" />
                 <p className="text-muted-foreground italic mb-4">“{t.quote}”</p>
