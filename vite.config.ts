@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/quiet-club-focus/', // ✅ moved to root level
+  base: '/', // ✅ moved to root level
   plugins: [
     react(),
     mode === 'development' && componentTagger(),
