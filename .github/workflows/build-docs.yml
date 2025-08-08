@@ -24,7 +24,7 @@ jobs:
         run: bun run build
 
       - name: Add CNAME file
-        run: echo "tasks.kiernandimeglio.com" > docs/CNAME
+        run: echo "quiet.kiernandimeglio.com" > docs/CNAME
 
       - name: Commit built site to /docs
         run: |
