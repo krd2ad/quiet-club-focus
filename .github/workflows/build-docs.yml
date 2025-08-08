@@ -23,6 +23,9 @@ jobs:
       - name: Build site into docs/
         run: bun run build
 
+      - name: Add CNAME file
+        run: echo "tasks.kiernandimeglio.com" > docs/CNAME
+
       - name: Commit built site to /docs
         run: |
           git config user.name "github-actions[bot]"
